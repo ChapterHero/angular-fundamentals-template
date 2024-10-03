@@ -30,5 +30,12 @@
     &-text {
       margin-top: 16px;
     }
+    &-actions {
+      display: flex;
+
+      .course-card__buttons{
+        display: flex;
+      }
+    }
   }
 }

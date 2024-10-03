@@ -1,21 +1,42 @@
-<app-header></app-header>
+<app-header>
+  <div *ngIf="!loggedIn">
+    <app-button [buttonText]="'Login'" (click)="onLogin()"></app-button>
+  </div>
+  <div *ngIf="loggedIn" style="display: flex;">
+    <div>
+      <span style="padding: 10px; align-items: center;">Harry Potter</span>
+    </div>
+    <div>
+      <app-button [buttonText]="'Logout'" (click)="onLogin()"></app-button>
+    </div>
+  </div>
+</app-header>
+
 <div class="app-root">
   <!-- Search component -->
   <!--<app-search></app-search>-->
 
   <!-- Info component -->
-  <!--<app-info></app-info>-->
+  <app-info title="Your list is empty!" text="Please use 'Add New Course' button to add your first course">
+    <app-button [buttonText]="'Add New Course'"></app-button>
+  </app-info>
 
-  <!-- Course Card component -->
-  <!--<app-course-card></app-course-card>-->
+  <!-- Course Card component, to check if a single card is working -->
+  <!-- <app-course-card>
+    <app-button [iconName]="['fas', 'trash-can']"></app-button>
+    <app-button [iconName]="['fas', 'pencil']"></app-button>
+  </app-course-card> -->
+
+  <!-- Courses List Component -->
+  <app-courses-list></app-courses-list>
 
   <!-- Login Form component -->
   <!--<app-login-form></app-login-form>-->
 
-  <!-- Login Form component -->
+  <!-- Registration Form component -->
   <!--<app-registration-form></app-registration-form>-->
 
-  <!-- Login Form component -->
+  <!-- Course Form component -->
   <!--<app-course-form></app-course-form>-->
 
   <!-- Modal component -->

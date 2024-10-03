@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+/.angular
+dist
+
 # testing
 /coverage
 

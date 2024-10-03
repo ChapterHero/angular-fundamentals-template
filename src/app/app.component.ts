@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'courses-app';
+  loggedIn: boolean = false;
+  
+  onLogin() {
+    this.loggedIn = !this.loggedIn;
+  }
 }
