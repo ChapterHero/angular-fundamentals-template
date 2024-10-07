@@ -35,3 +35,11 @@
     cursor: pointer;
   }
 }
+
+input {
+  border: 0.5px solid black;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

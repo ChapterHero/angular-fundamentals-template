@@ -1,4 +1,4 @@
-<button class="app-button" [ngClass]="{'app-button__single-icon': iconName}">
+<button class="app-button" [ngClass]="{'app-button__single-icon': iconName}" [type]="buttonType" (click)="onClick()">
   <fa-icon *ngIf="iconName" [icon]="iconName" ></fa-icon>
   <span *ngIf="!iconName">{{ buttonText }}</span>
 </button>
